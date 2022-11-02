@@ -1,0 +1,10 @@
+.bannerArea {
+  width: 100%;
+  height: 99.4rem;
+}
+
+.backgroundRed {
+  width: 100%;
+  height: 70.6rem;
+  background: url('../../img/bg-red.svg') no-repeat center center;
+}

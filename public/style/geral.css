@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@400;800&display=swap');
+
+:root {
+  --font-title: 'Montserrat', sans-serif;
+  --font-paragraph: 'inter', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+}
+
+h1 {
+  font-family: var(--font-title);
+  font-size: 6.4rem;
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+}
+
+.contain {
+  width: 100%;
+  max-width: 118.9rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+  display: grid;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  display: block;
+
+  cursor: pointer;
+}
