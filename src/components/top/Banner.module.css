@@ -3,8 +3,58 @@
   height: 99.4rem;
 }
 
+.contentArea {
+  padding-top: 20.3rem;
+}
+
 .backgroundRed {
   width: 100%;
   height: 70.6rem;
   background: url('../../img/bg-red.svg') no-repeat center center;
+  background-size: cover;
+}
+
+.title {
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  line-height: 7.8rem;
+  letter-spacing: -0.01;
+  margin-bottom: 0.8rem;
+}
+
+.paragraph {
+  color: #ffffff;
+  text-align: center;
+  font-family: var(--font-paragraph);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.pokeballGrid {
+  position: relative;
+  width: 100%;
+  max-width: 79.8rem;
+  margin: 16.2rem auto 0;
+  animation: floatAnimation 6s ease-in-out infinite;
+}
+
+.star {
+  margin-left: -8.5rem;
+  position: absolute;
+  top: -4.9rem;
+  left: 50%;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translatey(0);
+  }
 }

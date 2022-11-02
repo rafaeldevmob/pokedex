@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <>
       <header className={StyleHeader.header}>
-        <div className="contain logo">
+        <div className="contain">
           <img src={Logo} alt="logo Pokemon" />
         </div>
       </header>
