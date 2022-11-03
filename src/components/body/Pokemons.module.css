@@ -1,9 +1,14 @@
 .top {
   position: relative;
   margin-top: -20.8rem;
-  padding-top: 11.9rem;
 }
 
 .title {
   text-align: center;
+  padding-top: 10.9rem;
+  margin-bottom: 6.1rem;
+}
+
+.grid {
+  display: flex;
 }

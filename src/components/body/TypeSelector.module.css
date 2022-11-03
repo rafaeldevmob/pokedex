@@ -1,0 +1,30 @@
+.leftContainer {
+  padding-top: 7rem;
+  border-right: 1px solid var(--grey);
+  /* flex: 1; */
+}
+
+.type {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  padding-bottom: 3rem;
+}
+
+.icon {
+  margin-right: 2rem;
+  opacity: 1;
+  filter: grayscale(100%);
+}
+
+.text {
+  color: var(--color-disable);
+  font-family: var(--font-paragraph);
+  font-size: 1.5rem;
+  line-height: 150%;
+  font-weight: 500;
+}

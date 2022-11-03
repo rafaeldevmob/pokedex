@@ -5,6 +5,8 @@
   --font-paragraph: 'inter', sans-serif;
   --color-font-black: #2f3133;
   --grey: #eff3f6;
+  --color-disable: #909090;
+  --color-active: #3e75c3;
 }
 
 * {
