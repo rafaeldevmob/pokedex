@@ -1,0 +1,28 @@
+.rightContainer {
+  padding: 7.2rem 2.5rem 10rem 7.5rem;
+  flex: 1;
+}
+
+.top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 7.5rem;
+}
+
+.top img {
+  margin-right: 1.8rem;
+}
+
+.jsCountPokemons {
+  font-family: var(--font-title);
+  margin-right: 0.5rem;
+}
+
+.spanCountPokemons {
+  color: #4d5053;
+  font-family: var(--font-paragraph);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 150%;
+}

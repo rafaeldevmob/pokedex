@@ -1,7 +1,8 @@
 .leftContainer {
-  padding-top: 7rem;
+  max-width: 23.9rem;
+  padding-top: 7.2rem;
   border-right: 1px solid var(--grey);
-  /* flex: 1; */
+  flex: 1;
 }
 
 .type {
