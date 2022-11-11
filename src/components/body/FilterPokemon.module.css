@@ -1,6 +1,7 @@
 .rightContainer {
   padding: 7.2rem 2.5rem 10rem 7.5rem;
   flex: 1;
+  overflow-x: hidden;
 }
 
 .top {

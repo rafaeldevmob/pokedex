@@ -1,6 +1,6 @@
 .leftContainer {
   max-width: 23.9rem;
-  padding-top: 7.2rem;
+  padding: 7.2rem 0 10rem 2.4rem;
   border-right: 1px solid var(--grey);
   flex: 1;
 }
@@ -12,17 +12,24 @@
   align-items: center;
 }
 
-.list {
+.leftContainer li {
+  opacity: 0.6;
   padding-bottom: 3rem;
+  filter: grayscale(100%);
+}
+
+.leftContainer li:hover {
+  opacity: 1;
+  filter: grayscale(0);
 }
 
 .icon {
   margin-right: 2rem;
   opacity: 1;
-  filter: grayscale(100%);
 }
 
 .text {
+  text-transform: capitalize;
   color: var(--color-disable);
   font-family: var(--font-paragraph);
   font-size: 1.5rem;

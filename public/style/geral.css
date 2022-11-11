@@ -67,3 +67,8 @@ button {
 
   cursor: pointer;
 }
+
+.unknown,
+.shadow {
+  display: none;
+}
