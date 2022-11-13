@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Pokemons from './components/body/Pokemons';
 import Footer from './components/footer/Footer';
 import Banner from './components/top/Banner';

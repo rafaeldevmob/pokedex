@@ -1,8 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import StyleType from '../body/TypeSelector.module.css';
-import StyleCardsPokemon from '../body/CardsPokemon.module.css';
-import Pokemon1 from '../../img/pokemon/1.svg';
-import IcoType from '../../img/poke-type/grass.svg';
+// import StyleCardsPokemon from '../body/CardsPokemon.module.css';
+
+export const searchPokemon = async (pokemon) => {
+  try {
+    let url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+    const response = await fetch(url);
+    return await response.json();
+  } catch (error) {
+    console.log('search error', error);
+  }
+};
+
+export const getPokemons = async (limit = 50, offset = 0) => {
+  try {
+    let url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
+    const response = await fetch(url);
+    return await response.json();
+  } catch (error) {
+    console.log('search error', error);
+  }
+};
+
+export const getPokemonData = async (url) => {
+  try {
+    const response = await fetch(url);
+    return await response.json();
+  } catch (error) {
+    console.log('search error', error);
+  }
+};
 
 export function TypeApi() {
   const [types, setTypes] = useState([]);
@@ -29,42 +56,6 @@ export function TypeApi() {
             />
             <span className={StyleType.text}>{typePokemon.name}</span>
           </button>
-        </li>
-      ))}
-    </>
-  );
-}
-
-export function PokemonApi() {
-  const [pokemon, setPokemon] = useState([]);
-
-  useEffect(() => {
-    AllPokemons();
-  }, []);
-
-  const AllPokemons = () => {
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=50&offset=0')
-      .then((resp) => resp.json())
-      .then((json) => setPokemon(json.results));
-  };
-  return (
-    <>
-      {pokemon.map((allPokemon, key) => (
-        <li key={key}>
-          <div className={StyleCardsPokemon.imagePokemon}>
-            <img src={Pokemon1} alt="" />
-          </div>
-          <div className={StyleCardsPokemon.info}>
-            <div>
-              <span className={StyleCardsPokemon.id}>#001</span>
-              <strong className={StyleCardsPokemon.PokemonName}>
-                {allPokemon.name}
-              </strong>
-            </div>
-            <div className={StyleCardsPokemon.icoType}>
-              <img src={IcoType} alt="" />
-            </div>
-          </div>
         </li>
       ))}
     </>

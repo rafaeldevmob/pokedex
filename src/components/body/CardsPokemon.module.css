@@ -84,6 +84,7 @@
 
 .PokemonName {
   font-family: var(--font-title);
+  text-transform: capitalize;
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 150%;
@@ -91,9 +92,17 @@
 }
 
 .icoType {
-  width: 2.8rem;
-  height: 2.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.icoType img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.icoType img:last-child {
+  margin-left: 0.8rem;
 }
