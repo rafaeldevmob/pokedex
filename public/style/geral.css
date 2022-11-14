@@ -5,9 +5,26 @@
   --font-paragraph: 'inter', sans-serif;
   --color-font-black: #2f3133;
   --grey: #eff3f6;
-  --color-disable: #909090;
-  --color-active: #3e75c3;
-  --grass: #d6ebdc;
+  --normal: #909090;
+  --fighting: #c44d61;
+  --flying: #758cbd;
+  --poison: #ac6aca;
+  --ground: #ce8056;
+  --rock: #84beb3;
+  --bug: #9bba48;
+  --ghost: #616eb7;
+  --steel: #6594a1;
+  --fire: #e96303;
+  --water: #4f77be;
+  --grass: #73b861;
+  --electric: #d4bc34;
+  --psychic: #eb8b85;
+  --ice: #71baac;
+  --dragon: #2c6ac1;
+  --dark: #595761;
+  --fairy: #e296e1;
+  --shadown: #0000ff;
+  --unknow: #024546;
 }
 
 * {
@@ -70,4 +87,96 @@ button {
 .unknown,
 .shadow {
   display: none;
+}
+
+.imagePokemon {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 1.4rem;
+}
+
+.imagePokemon::before {
+  content: '';
+  display: block;
+  width: 16.5rem;
+  height: 16.5rem;
+  border-radius: 50%;
+  position: absolute;
+  filter: opacity(0.15);
+  z-index: 0;
+}
+
+.normal .imagePokemon::before {
+  background: var(--normal);
+}
+.fighting .imagePokemon::before {
+  background: var(--fighting);
+}
+.flyng .imagePokemon::before {
+  background: var(--flying);
+}
+.poison .imagePokemon::before {
+  background: var(--poison);
+}
+.rock .imagePokemon::before {
+  background: var(--rock);
+}
+.bug .imagePokemon::before {
+  background: var(--bug);
+}
+.ghost .imagePokemon::before {
+  background: var(--ghost);
+}
+.steel .imagePokemon::before {
+  background: var(--steel);
+}
+.fire .imagePokemon::before {
+  background: var(--fire);
+}
+.water .imagePokemon::before {
+  background: var(--water);
+}
+.fire .imagePokemon::before {
+  background: var(--fire);
+}
+.grass .imagePokemon::before {
+  background: var(--grass);
+}
+.electric .imagePokemon::before {
+  background: var(--electric);
+}
+.ground .imagePokemon::before {
+  background: var(--ground);
+}
+.psychic .imagePokemon::before {
+  background: var(--psychic);
+}
+.ice .imagePokemon::before {
+  background: var(--ice);
+}
+.dragon .imagePokemon::before {
+  background: var(--dragon);
+}
+.dark .imagePokemon::before {
+  background: var(--dark);
+}
+.fairy .imagePokemon::before {
+  background: var(--fairy);
+}
+.shadown .imagePokemon::before {
+  background: var(--shadown);
+}
+.unknow .imagePokemon::before {
+  background: var(--unknow);
+}
+
+.imagePokemon img {
+  max-width: 55%;
+  max-height: 20rem;
+  z-index: 1;
 }

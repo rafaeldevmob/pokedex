@@ -1,6 +1,4 @@
 import React from 'react';
-import StyleType from '../body/TypeSelector.module.css';
-import StyleCardsPokemon from '../body/CardsPokemon.module.css';
 import Pokemon from '../Fetch/FilterApi';
 
 const Pokedex = (props) => {

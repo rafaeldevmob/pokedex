@@ -5,6 +5,7 @@ import StyleCardsPokemon from '../body/CardsPokemon.module.css';
 const Pokemon = (props) => {
   const { pokemon } = props;
   const [pokemonType, setPokemonType] = useState([]);
+  const styleBackground = pokemon.types[0].type.name;
 
   useEffect(() => {
     AllPokemonsType();
@@ -17,8 +18,8 @@ const Pokemon = (props) => {
   };
   return (
     <>
-      <li>
-        <div className={StyleCardsPokemon.imagePokemon}>
+      <li className={styleBackground}>
+        <div className="imagePokemon">
           <img
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
             alt={pokemon.name}

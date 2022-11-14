@@ -43,7 +43,7 @@
   justify-content: space-between;
 }
 
-.imagePokemon {
+/* .imagePokemon {
   position: relative;
   width: 20rem;
   height: 20rem;
@@ -54,22 +54,22 @@
   margin-bottom: 1.4rem;
 }
 
-.imagePokemon img {
-  max-width: 55%;
-  max-height: 20rem;
-  z-index: 1;
-}
-
 .imagePokemon::before {
   content: '';
   display: block;
   width: 16.5rem;
   height: 16.5rem;
+  background: var(--grass);
   border-radius: 50%;
   position: absolute;
-  background: var(--grass);
   z-index: 0;
 }
+
+.imagePokemon img {
+  max-width: 55%;
+  max-height: 20rem;
+  z-index: 1;
+} */
 
 .id {
   font-family: var(--font-paragraph);
