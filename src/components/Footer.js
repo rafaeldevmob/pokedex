@@ -1,7 +1,7 @@
 import React from 'react';
-import StyleFooter from './Footer.module.css';
-import ImageLogo from '../../img/logo.svg';
-import ImagePokeball from '../../img/img-pokeball.png';
+import StyleFooter from './style_module/Footer.module.css';
+import ImageLogo from '../img/logo.svg';
+import ImagePokeball from '../img/img-pokeball.png';
 
 export default function Footer() {
   return (
@@ -12,7 +12,7 @@ export default function Footer() {
             <img src={ImageLogo} alt="logo" />
             <img
               src={ImagePokeball}
-              alt="logo"
+              alt="pokeball"
               className={StyleFooter.pokeball}
             />
           </div>

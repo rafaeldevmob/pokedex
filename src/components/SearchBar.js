@@ -1,27 +1,25 @@
 import React, { useState } from 'react';
-import StylePokemon from '../body/Pokemons.module.css';
-import SearchIcon from '../../img/lupa.svg';
-import { searchPokemon } from '../Fetch/FecthApi';
+import StylePokemon from './style_module/Pokemons.module.css';
+import SearchIcon from '../img/lupa.svg';
 
-export default function Search() {
+const SearchBar = (props) => {
   const [search, setSearch] = useState('');
-  const [pokemon, setPokemon] = useState('');
+  const { onSearch } = props;
+
   const onChangeHandler = (e) => {
     setSearch(e.target.value);
+    if (e.target.value.length === 0) {
+      onSearch(undefined);
+    }
   };
 
   const onButtonClickHandler = () => {
-    onSearchHandler(search);
-  };
-
-  const onSearchHandler = async (pokemon) => {
-    const result = await searchPokemon(pokemon);
-    setPokemon(result);
+    onSearch(search);
   };
 
   return (
     <>
-      <div className="contain">
+      <section className="contain">
         <div className={StylePokemon.searchBar}>
           <h2>Select your Pokémon</h2>
           <div className={StylePokemon.search}>
@@ -39,7 +37,9 @@ export default function Search() {
             </button>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
-}
+};
+
+export default SearchBar;

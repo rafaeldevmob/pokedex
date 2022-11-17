@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import StyleCardsPokemon from './CardsPokemon.module.css';
-import { getPokemonData, getPokemons, PokemonApi } from '../Fetch/FecthApi';
+import { getPokemonData, getPokemons, searchPokemon } from '../Fetch/FecthApi';
 import Pokedex from './createPokemonCards';
 
 export default function CardsPokemon() {

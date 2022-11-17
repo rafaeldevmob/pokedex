@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import Pokemons from './components/body/Pokemons';
-import Footer from './components/footer/Footer';
-import Banner from './components/top/Banner';
-import Header from './components/top/Header';
+import React from 'react';
 
-export default function App() {
+import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+function App() {
   return (
-    <div>
+    <>
       <Header />
-      <Banner />
-      <Pokemons />
       <Footer />
-    </div>
+    </>
   );
 }
+
+export default App;

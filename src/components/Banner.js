@@ -1,12 +1,12 @@
 import React from 'react';
-import StyleBanner from './Banner.module.css';
-import Stars from '../../img/luzes.svg';
-import Pokeball from '../../img/img-pokeball.png';
+import StyleBanner from './style_module/Banner.module.css';
+import Stars from '../img/luzes.svg';
+import Pokeball from '../img/img-pokeball.png';
 
 export default function Banner() {
   return (
     <>
-      <section className={StyleBanner.bannerArea}>
+      <div className={StyleBanner.bannerArea}>
         <div className={StyleBanner.backgroundRed}>
           <div className={StyleBanner.contentArea}>
             <h1 className={StyleBanner.title}>Who is that Pokémon?</h1>
@@ -20,7 +20,7 @@ export default function Banner() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

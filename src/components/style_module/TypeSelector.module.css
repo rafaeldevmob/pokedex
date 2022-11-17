@@ -1,6 +1,6 @@
 .leftContainer {
   max-width: 23.9rem;
-  padding: 7.2rem 0 10rem 2.4rem;
+  padding: 7.2rem 0 10rem 0rem;
   border-right: 1px solid var(--grey);
   flex: 1;
 }
