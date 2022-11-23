@@ -4,7 +4,7 @@ import Logo from '../img/logo.svg';
 import Banner from './Banner';
 import Pokedex from './Pokedex';
 import SearchBar from './SearchBar';
-import StyleNavbar from './style_module/Navbar.module.css';
+import Style from './style_module/Header.module.css';
 
 export default function Header() {
   const [loading, setLoading] = useState(false);
@@ -49,7 +49,7 @@ export default function Header() {
   return (
     <>
       <header>
-        <nav className={StyleNavbar.header_navbar}>
+        <nav className={Style.header_navbar}>
           <img src={Logo} alt="Pokemon" />
         </nav>
         <Banner />

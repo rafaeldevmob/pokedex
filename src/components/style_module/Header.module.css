@@ -1,0 +1,133 @@
+.header_navbar {
+  width: 100%;
+  height: 11.2rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.header_navbar img {
+  padding-left: 2.4rem;
+}
+
+.header_banner {
+  width: 100%;
+}
+
+.header_banner_text {
+  padding-top: 20.3rem;
+}
+
+.header_banner_background {
+  width: 100%;
+  height: 70.6rem;
+  background: url('../../img/bg-red.svg') no-repeat center center;
+  background-size: cover;
+}
+
+.header_banner_background::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -7.5em;
+  background: var(--grey);
+  z-index: -1;
+}
+
+.header_title {
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  line-height: 7.8rem;
+  letter-spacing: -0.01;
+  margin-bottom: 0.8rem;
+}
+
+.header_paragraph {
+  color: #ffffff;
+  text-align: center;
+  font-family: var(--font-paragraph);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.header_banner_pokeball {
+  position: relative;
+  width: 100%;
+  max-width: 79.8rem;
+  margin: 16.2rem auto 0;
+  animation: floatAnimation 6s ease-in-out infinite;
+}
+
+.header_banner_star {
+  margin-left: -8.5rem;
+  position: absolute;
+  top: -4.9rem;
+  left: 50%;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translatey(0);
+  }
+}
+
+.search_input {
+  max-width: 40.3rem;
+  height: 5.6rem;
+  padding: 0 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  background: #ffffff;
+  border-radius: 12.2rem;
+}
+
+.search_wrapper {
+  padding-top: 14.9rem;
+  margin-bottom: 7.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.search_wrapper input {
+  width: 100%;
+  margin-left: 1.7rem;
+  font-size: 1.5rem;
+  line-height: 150%;
+  color: #a0afba;
+  outline: none;
+  border: none;
+}
+
+::placeholder {
+  font-family: var(--font-paragraph);
+  line-height: 150%;
+  color: #a0afba;
+}
+
+.search_input_icon {
+  width: 4.2rem;
+  height: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(158, 185, 225, 0.1);
+  border: 1px solid #e1e9ef;
+  border-radius: 50%;
+}

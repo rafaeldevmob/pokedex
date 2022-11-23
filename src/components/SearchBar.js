@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import StylePokemon from './style_module/Pokemons.module.css';
+import Style from './style_module/Header.module.css';
 import SearchIcon from '../img/lupa.svg';
 
 const SearchBar = (props) => {
@@ -20,9 +20,9 @@ const SearchBar = (props) => {
   return (
     <>
       <section className="contain">
-        <div className={StylePokemon.searchBar}>
+        <div className={Style.search_wrapper}>
           <h2>Select your Pokémon</h2>
-          <div className={StylePokemon.search}>
+          <div className={Style.search_input}>
             <input
               type="text"
               placeholder="Search name our pokemon"
@@ -30,7 +30,7 @@ const SearchBar = (props) => {
             />
             <button
               type="button"
-              className={StylePokemon.icon}
+              className={Style.search_input_icon}
               onClick={onButtonClickHandler}
             >
               <img src={SearchIcon} alt="search" />

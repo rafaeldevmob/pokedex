@@ -7,13 +7,13 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <div className={StyleFooter.wrapper}>
-          <div className={StyleFooter.logo}>
+        <div className={StyleFooter.footer_wrapper}>
+          <div className={StyleFooter.footer_logo}>
             <img src={ImageLogo} alt="logo" />
             <img
               src={ImagePokeball}
               alt="pokeball"
-              className={StyleFooter.pokeball}
+              className={StyleFooter.footer_pokeball}
             />
           </div>
         </div>
