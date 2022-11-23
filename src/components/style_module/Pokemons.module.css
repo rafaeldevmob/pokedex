@@ -41,7 +41,7 @@
 }
 
 .pokemonCount_wrapper {
-  padding: 7.2rem 2.5rem 0 7.5rem;
+  padding: 7.2rem 0rem 0 7.5rem;
   flex: 1;
   overflow-x: hidden;
 }

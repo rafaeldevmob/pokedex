@@ -22,6 +22,7 @@ const Pokedex = (props) => {
                 })}
             </ul>
           )}
+          <button className={Style.pokedex_button}>Load more</button>
         </div>
       </main>
     </>
