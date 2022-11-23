@@ -26,3 +26,13 @@ export const getPokemonData = async (url) => {
     console.log('getPokemon', error);
   }
 };
+
+export const getTypesPokemons = async () => {
+  try {
+    let urlType = 'https://pokeapi.co/api/v2/type/';
+    const response = await fetch(urlType);
+    return await response.json();
+  } catch (error) {
+    console.log('getPokemon', error);
+  }
+};

@@ -1,7 +1,7 @@
 import React from 'react';
 import StyleCardsPokemon from './style_module/CardsPokemon.module.css';
 
-const Pokemon = (props) => {
+const PokemonCard = (props) => {
   const { pokemon } = props;
   const styleBackground = pokemon.types[0].type.name;
   return (
@@ -40,4 +40,4 @@ const Pokemon = (props) => {
   );
 };
 
-export default Pokemon;
+export default PokemonCard;

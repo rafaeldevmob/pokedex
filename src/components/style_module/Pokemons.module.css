@@ -1,12 +1,3 @@
-.top {
-  position: relative;
-  margin-top: -20.8rem;
-}
-
-.grid {
-  display: flex;
-}
-
 .pokedex_left_wrapper li {
   opacity: 0.6;
   padding-bottom: 3rem;

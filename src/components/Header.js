@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { getPokemonData, getPokemons, searchPokemon } from '../api';
+import {
+  getPokemonData,
+  getPokemons,
+  searchPokemon,
+  getTypesPokemons,
+} from '../api';
 import Logo from '../img/logo.svg';
 import Banner from './Banner';
 import Pokedex from './Pokedex';
@@ -10,6 +15,8 @@ export default function Header() {
   const [loading, setLoading] = useState(false);
   const [notFound, setNotFound] = useState(false);
   const [pokemons, setPokemons] = useState([]);
+  const [types, setTypes] = useState([]);
+
   const fetchPokemons = async () => {
     try {
       setLoading(true);
@@ -46,6 +53,23 @@ export default function Header() {
     }
     setLoading(false);
   };
+
+  const fetchTypesPokemon = async () => {
+    try {
+      const data = await getTypesPokemons();
+      const promises = data.results.map((type) => {
+        return type.name;
+      });
+      setTypes(promises);
+    } catch (error) {
+      console.log('TypePokemons', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchTypesPokemon();
+  }, []);
+
   return (
     <>
       <header>
@@ -58,7 +82,7 @@ export default function Header() {
       {notFound ? (
         <div>Pokemon Not Exist</div>
       ) : (
-        <Pokedex pokemons={pokemons} loading={loading} />
+        <Pokedex pokemons={pokemons} loading={loading} types={types} />
       )}
     </>
   );

@@ -1,14 +1,15 @@
 import React from 'react';
-import Pokemon from './Pokemon';
+import PokemonCard from './PokemonCards';
 import CountPokemon from './CountPokemon';
 import TypeSelector from './TypeSelector';
 import StyleCardsPokemon from './style_module/CardsPokemon.module.css';
 const Pokedex = (props) => {
-  const { pokemons, loading } = props;
+  const { pokemons, loading, types } = props;
+
   return (
     <>
       <main className="pokedex contain">
-        <TypeSelector />
+        <TypeSelector types={types} />
         <div className={StyleCardsPokemon.pokedex_right_wrapper}>
           <CountPokemon />
           {loading ? (
@@ -17,7 +18,7 @@ const Pokedex = (props) => {
             <ul className={StyleCardsPokemon.pokedex_cardsPokemon}>
               {pokemons &&
                 pokemons.map((pokemon, index) => {
-                  return <Pokemon pokemon={pokemon} key={index} />;
+                  return <PokemonCard pokemon={pokemon} key={index} />;
                 })}
             </ul>
           )}
