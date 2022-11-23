@@ -22,6 +22,10 @@
   align-items: center;
 }
 
+.pokedex_typePokemon span {
+  font-weight: 600;
+}
+
 .pokedex_typePokemon_icon {
   margin-right: 2rem;
   opacity: 1;

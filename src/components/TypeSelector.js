@@ -16,7 +16,9 @@ export default function TypeSelector(props) {
                 alt="all"
                 className={Style.pokedex_typePokemon_icon}
               />
-              <span className={Style.pokedex_typePokemon_text}>All</span>
+              <span className={`${Style.pokedex_typePokemon_text} all`}>
+                All
+              </span>
             </button>
           </li>
           {type.map((type, key) => {

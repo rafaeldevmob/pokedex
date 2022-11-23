@@ -131,3 +131,7 @@
   border: 1px solid #e1e9ef;
   border-radius: 50%;
 }
+
+.search_input_icon:hover {
+  background: rgba(158, 185, 225, 0.3);
+}

@@ -80,35 +80,7 @@ img {
 
 button {
   display: block;
-
   cursor: pointer;
-}
-
-.unknown,
-.shadow {
-  display: none;
-}
-
-.imagePokemon {
-  position: relative;
-  width: 20rem;
-  height: 20rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  margin-bottom: 1.4rem;
-}
-
-.imagePokemon::before {
-  content: '';
-  display: block;
-  width: 16.5rem;
-  height: 16.5rem;
-  border-radius: 50%;
-  position: absolute;
-  filter: opacity(0.15);
-  z-index: 0;
 }
 
 .normal .imagePokemon::before {
@@ -175,37 +147,96 @@ button {
   background: var(--unknow);
 }
 
+span.all:hover {
+  color: #3e75c3;
+}
+span.normal:hover:hover {
+  color: var(--normal);
+}
+span.fighting:hover {
+  color: var(--fighting);
+}
+span.flying:hover {
+  color: var(--flying);
+}
+span.poison:hover {
+  color: var(--poison);
+}
+span.rock:hover {
+  color: var(--rock);
+}
+span.bug:hover {
+  color: var(--bug);
+}
+span.ghost:hover {
+  color: var(--ghost);
+}
+span.steel:hover {
+  color: var(--steel);
+}
+span.fire:hover {
+  color: var(--fire);
+}
+span.water:hover {
+  color: var(--water);
+}
+span.fire:hover {
+  color: var(--fire);
+}
+span.grass:hover {
+  color: var(--grass);
+}
+span.electric:hover {
+  color: var(--electric);
+}
+span.ground:hover {
+  color: var(--ground);
+}
+span.psychic:hover {
+  color: var(--psychic);
+}
+span.ice:hover {
+  color: var(--ice);
+}
+span.dragon:hover {
+  color: var(--dragon);
+}
+span.dark:hover {
+  color: var(--dark);
+}
+span.fairy:hover {
+  color: var(--fairy);
+}
+
+.imagePokemon {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 1.4rem;
+}
+
+.imagePokemon::before {
+  content: '';
+  display: block;
+  width: 16.5rem;
+  height: 16.5rem;
+  border-radius: 50%;
+  position: absolute;
+  filter: opacity(0.15);
+  z-index: 0;
+}
+
 .imagePokemon img {
   max-width: 55%;
   max-height: 20rem;
   z-index: 1;
 }
 
-/**/
-
-.gridPokemon {
-  width: 80%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
-}
-
-.gridPokemon img {
-  width: 100px;
-  height: 100px;
-}
-
 .pokedex {
   display: flex;
   padding-top: 2rem;
-}
-
-.type {
-  display: flex;
-}
-
-.type img {
-  width: 15px;
-  height: 15px;
-  margin-left: 10px;
 }

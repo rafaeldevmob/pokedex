@@ -1,5 +1,5 @@
 import React from 'react';
-import StyleCardsPokemon from './style_module/CardsPokemon.module.css';
+import Style from './style_module/CardsPokemon.module.css';
 
 const PokemonCard = (props) => {
   const { pokemon } = props;
@@ -13,16 +13,12 @@ const PokemonCard = (props) => {
             alt={pokemon.name}
           />
         </div>
-        <div className={StyleCardsPokemon.pokemonCard_info_wrapper}>
+        <div className={Style.pokemonCard_info_wrapper}>
           <div>
-            <span className={StyleCardsPokemon.pokemonCard_id}>
-              #{pokemon.id}
-            </span>
-            <strong className={StyleCardsPokemon.pokemonCard_text}>
-              {pokemon.name}
-            </strong>
+            <span className={Style.pokemonCard_id}>#{pokemon.id}</span>
+            <strong className={Style.pokemonCard_text}>{pokemon.name}</strong>
           </div>
-          <div className={StyleCardsPokemon.pokemonCard_icoType}>
+          <div className={Style.pokemonCard_icoType}>
             {pokemon.types.map((types, index) => {
               return (
                 <div key={index}>
