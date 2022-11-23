@@ -14,9 +14,7 @@ const ListTypePokemon = (props) => {
               alt={type}
               className={Style.pokedex_typePokemon_icon}
             />
-            <span className={`${Style.pokedex_typePokemon_text} ${type}`}>
-              {type}
-            </span>
+            <span className={`${Style.pokedex_typePokemon_text}`}>{type}</span>
           </button>
         </li>
       </>

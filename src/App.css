@@ -147,64 +147,64 @@ button {
   background: var(--unknow);
 }
 
-span.all:hover {
+.all button:hover {
   color: #3e75c3;
 }
-span.normal:hover:hover {
+.normal button:hover {
   color: var(--normal);
 }
-span.fighting:hover {
+.fighting button:hover {
   color: var(--fighting);
 }
-span.flying:hover {
+.flying button:hover {
   color: var(--flying);
 }
-span.poison:hover {
+.poison button:hover {
   color: var(--poison);
 }
-span.rock:hover {
+.rock button:hover {
   color: var(--rock);
 }
-span.bug:hover {
+.bug button:hover {
   color: var(--bug);
 }
-span.ghost:hover {
+.ghost button:hover {
   color: var(--ghost);
 }
-span.steel:hover {
+.steel button:hover {
   color: var(--steel);
 }
-span.fire:hover {
+.fire button:hover {
   color: var(--fire);
 }
-span.water:hover {
+.water button:hover {
   color: var(--water);
 }
-span.fire:hover {
+.fire button:hover {
   color: var(--fire);
 }
-span.grass:hover {
+.grass button:hover {
   color: var(--grass);
 }
-span.electric:hover {
+.electric button:hover {
   color: var(--electric);
 }
-span.ground:hover {
+.ground button:hover {
   color: var(--ground);
 }
-span.psychic:hover {
+.psychic button:hover {
   color: var(--psychic);
 }
-span.ice:hover {
+.ice button:hover {
   color: var(--ice);
 }
-span.dragon:hover {
+.dragon button:hover {
   color: var(--dragon);
 }
-span.dark:hover {
+.dark button:hover {
   color: var(--dark);
 }
-span.fairy:hover {
+.fairy button:hover {
   color: var(--fairy);
 }
 

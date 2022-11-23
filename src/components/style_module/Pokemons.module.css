@@ -1,6 +1,6 @@
 .pokedex_left_wrapper li {
   opacity: 0.6;
-  padding-bottom: 3rem;
+  margin-bottom: 3rem;
   filter: grayscale(100%);
 }
 
@@ -16,6 +16,7 @@
 }
 
 .pokedex_typePokemon {
+  width: 100%;
   background: none;
   border: none;
   display: flex;
