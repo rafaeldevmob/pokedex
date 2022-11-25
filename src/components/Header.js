@@ -16,12 +16,14 @@ export default function Header() {
   const [notFound, setNotFound] = useState(false);
   const [pokemons, setPokemons] = useState([]);
   const [types, setTypes] = useState([]);
+  const [showMore, setShowMore] = useState([]);
 
+  const loadMorePokemon = 9;
   const fetchPokemons = async () => {
     try {
       setLoading(true);
       setNotFound(false);
-      const data = await getPokemons();
+      const data = await getPokemons(loadMorePokemon + showMore, 0);
       const promises = data.results.map(async (pokemon) => {
         return await getPokemonData(pokemon.url);
       });
@@ -35,7 +37,8 @@ export default function Header() {
 
   useEffect(() => {
     fetchPokemons();
-  }, []);
+    fetchTypesPokemon();
+  }, [showMore]);
 
   const onSearchHandler = async (pokemon) => {
     if (!pokemon) {
@@ -66,10 +69,6 @@ export default function Header() {
     }
   };
 
-  useEffect(() => {
-    fetchTypesPokemon();
-  }, []);
-
   return (
     <>
       <header>
@@ -82,7 +81,13 @@ export default function Header() {
       {notFound ? (
         <div>Pokemon Not Exist</div>
       ) : (
-        <Pokedex pokemons={pokemons} loading={loading} types={types} />
+        <Pokedex
+          pokemons={pokemons}
+          loading={loading}
+          types={types}
+          setShowMore={setShowMore}
+          showMore={showMore}
+        />
       )}
     </>
   );

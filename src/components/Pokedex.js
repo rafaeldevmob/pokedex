@@ -3,8 +3,14 @@ import PokemonCard from './PokemonCards';
 import CountPokemon from './CountPokemon';
 import TypeSelector from './TypeSelector';
 import Style from './style_module/CardsPokemon.module.css';
+import ButtonShowMore from './ButtonShowMore';
+
 const Pokedex = (props) => {
-  const { pokemons, loading, types } = props;
+  const { pokemons, loading, types, showMore, setShowMore } = props;
+  const ShowMorePokemon = (event) => {
+    event.preventDefault();
+    setShowMore(Number(showMore + 9));
+  };
 
   return (
     <>
@@ -22,7 +28,8 @@ const Pokedex = (props) => {
                 })}
             </ul>
           )}
-          <button className={Style.pokedex_button}>Load more</button>
+
+          <ButtonShowMore ShowMorePokemon={ShowMorePokemon} />
         </div>
       </main>
     </>
