@@ -5,16 +5,17 @@ import ListTypePokemon from './ListTypePokemon';
 
 export default function TypeSelector(props) {
   const type = props.types;
-  const { FilterTypePokemon } = props;
+  const { FilterTypePokemon, fetchPokemons } = props;
+  const allPokemons = () => {
+    fetchPokemons();
+  };
+
   return (
     <>
       <div className={Style.pokedex_left_wrapper}>
         <ul>
           <li className="All">
-            <button
-              className={Style.pokedex_typePokemon}
-              onClick={FilterTypePokemon}
-            >
+            <button className={Style.pokedex_typePokemon} onClick={allPokemons}>
               <img
                 src={All}
                 alt="all"

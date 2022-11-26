@@ -9,7 +9,6 @@ import {
 import Logo from '../img/logo.svg';
 import Banner from './Banner';
 import Pokedex from './Pokedex';
-import PokemonCard from './PokemonCards';
 import SearchBar from './SearchBar';
 import Style from './style_module/Header.module.css';
 
@@ -75,6 +74,7 @@ export default function Header() {
 
   const filterTypesPokemon = async () => {
     try {
+      setLoading(true);
       const data = await getFilterTypesPokemons(filterButton);
       const promises = data.pokemon.map((pokemons) => {
         return pokemons.pokemon.name;
@@ -85,6 +85,7 @@ export default function Header() {
       });
       const results = await Promise.all(filteredPokemon);
       setPokemons(results);
+      setLoading(false);
     } catch (error) {
       console.log('filterPokemons', error);
     }
@@ -111,6 +112,7 @@ export default function Header() {
           setFilterButton={setFilterButton}
           setShowMore={setShowMore}
           showMore={showMore}
+          fetchPokemons={fetchPokemons}
         />
       )}
     </>

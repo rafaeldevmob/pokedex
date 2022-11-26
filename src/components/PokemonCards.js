@@ -15,7 +15,15 @@ const PokemonCard = (props) => {
           </div>
           <div className={Style.pokemonCard_info_wrapper}>
             <div>
-              <span className={Style.pokemonCard_id}>#{pokemon.id}</span>
+              <span className={Style.pokemonCard_id}>
+                {pokemon.id < 10
+                  ? `#00${pokemon.id}`
+                  : pokemon.id > 10 && pokemon.id < 100
+                  ? `#0${pokemon.id}`
+                  : pokemon.id > 100
+                  ? `#${pokemon.id}`
+                  : null}
+              </span>
               <strong className={Style.pokemonCard_text}>{pokemon.name}</strong>
             </div>
             <div className={Style.pokemonCard_icoType}>
