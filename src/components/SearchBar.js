@@ -25,7 +25,7 @@ const SearchBar = (props) => {
           <div className={Style.search_input}>
             <input
               type="text"
-              placeholder="Search name our pokemon"
+              placeholder="Search name or ID"
               onChange={onChangeHandler}
             />
             <button

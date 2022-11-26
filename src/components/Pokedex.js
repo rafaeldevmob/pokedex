@@ -6,16 +6,21 @@ import Style from './style_module/CardsPokemon.module.css';
 import ButtonShowMore from './ButtonShowMore';
 
 const Pokedex = (props) => {
-  const { pokemons, loading, types, showMore, setShowMore } = props;
+  const { pokemons, loading, types, showMore, setShowMore, setFilterButton } =
+    props;
   const ShowMorePokemon = (event) => {
     event.preventDefault();
     setShowMore(Number(showMore + 9));
+  };
+  const FilterTypePokemon = (event) => {
+    let nameType = event.target.innerHTML;
+    if (nameType !== '' && nameType !== 'All') setFilterButton(nameType);
   };
 
   return (
     <>
       <main className="pokedex contain">
-        <TypeSelector types={types} />
+        <TypeSelector types={types} FilterTypePokemon={FilterTypePokemon} />
         <div className={Style.pokedex_right_wrapper}>
           <CountPokemon />
           {loading ? (

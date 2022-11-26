@@ -4,10 +4,12 @@ import {
   getPokemons,
   searchPokemon,
   getTypesPokemons,
+  getFilterTypesPokemons,
 } from '../api';
 import Logo from '../img/logo.svg';
 import Banner from './Banner';
 import Pokedex from './Pokedex';
+import PokemonCard from './PokemonCards';
 import SearchBar from './SearchBar';
 import Style from './style_module/Header.module.css';
 
@@ -16,6 +18,8 @@ export default function Header() {
   const [notFound, setNotFound] = useState(false);
   const [pokemons, setPokemons] = useState([]);
   const [types, setTypes] = useState([]);
+  const [filterTypes, setFilterTypes] = useState([]);
+  const [filterButton, setFilterButton] = useState([]);
   const [showMore, setShowMore] = useState([]);
 
   const loadMorePokemon = 9;
@@ -69,6 +73,25 @@ export default function Header() {
     }
   };
 
+  const filterTypesPokemon = async () => {
+    try {
+      const data = await getFilterTypesPokemons(filterButton);
+      const promises = data.pokemon.map((pokemons) => {
+        return pokemons.pokemon.name;
+      });
+      setFilterTypes(promises);
+      const filteredPokemon = promises.map(async (pokemon) => {
+        return await searchPokemon(pokemon);
+      });
+      const results = await Promise.all(filteredPokemon);
+      setPokemons(results);
+    } catch (error) {
+      console.log('filterPokemons', error);
+    }
+  };
+  useEffect(() => {
+    if (filterButton.length !== 0) filterTypesPokemon();
+  }, [filterButton]);
   return (
     <>
       <header>
@@ -85,6 +108,7 @@ export default function Header() {
           pokemons={pokemons}
           loading={loading}
           types={types}
+          setFilterButton={setFilterButton}
           setShowMore={setShowMore}
           showMore={showMore}
         />

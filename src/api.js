@@ -36,3 +36,13 @@ export const getTypesPokemons = async () => {
     console.log('getPokemon', error);
   }
 };
+
+export const getFilterTypesPokemons = async (type = '') => {
+  try {
+    let urlType = `https://pokeapi.co/api/v2/type/${type}`;
+    const response = await fetch(urlType);
+    return await response.json();
+  } catch (error) {
+    console.log('getPokemon', error);
+  }
+};
