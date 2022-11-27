@@ -29,6 +29,7 @@
 .pokedex_right_wrapper {
   width: 100%;
   min-height: 100vh;
+  padding-top: 7.2rem;
   padding-bottom: 4rem;
 }
 

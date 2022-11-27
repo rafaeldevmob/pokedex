@@ -1,6 +1,5 @@
 import React from 'react';
 import PokemonCard from './PokemonCards';
-import CountPokemon from './CountPokemon';
 import TypeSelector from './TypeSelector';
 import Style from './style_module/CardsPokemon.module.css';
 import ButtonShowMore from './ButtonShowMore';
@@ -23,7 +22,9 @@ const Pokedex = (props) => {
   };
   const FilterTypePokemon = (event) => {
     let nameType = event.target.innerHTML;
-    if (nameType !== '' && nameType !== 'All') setFilterButton(nameType);
+    if (nameType === 'All') {
+      fetchPokemons();
+    } else if (nameType !== '') setFilterButton(nameType);
   };
 
   return (
@@ -35,7 +36,6 @@ const Pokedex = (props) => {
           fetchPokemons={fetchPokemons}
         />
         <div className={Style.pokedex_right_wrapper}>
-          <CountPokemon />
           {loading ? (
             <Loading />
           ) : (

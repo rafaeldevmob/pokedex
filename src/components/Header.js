@@ -108,8 +108,11 @@ export default function Header() {
       ) : (
         <Pokedex
           pokemons={pokemons}
+          getPokemons={getPokemons}
           loading={loading}
           types={types}
+          getFilterTypesPokemons={getFilterTypesPokemons}
+          filterButton={filterButton}
           setFilterButton={setFilterButton}
           setShowMore={setShowMore}
           showMore={showMore}
