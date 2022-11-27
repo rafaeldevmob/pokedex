@@ -8,6 +8,7 @@ import {
 } from '../api';
 import Logo from '../img/logo.svg';
 import Banner from './Banner';
+import { NotFound } from './LoadFound';
 import Pokedex from './Pokedex';
 import SearchBar from './SearchBar';
 import Style from './style_module/Header.module.css';
@@ -103,7 +104,7 @@ export default function Header() {
       </header>
       <SearchBar onSearch={onSearchHandler} />
       {notFound ? (
-        <div>Pokemon Not Exist</div>
+        <NotFound />
       ) : (
         <Pokedex
           pokemons={pokemons}

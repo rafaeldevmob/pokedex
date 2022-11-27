@@ -4,6 +4,7 @@ import CountPokemon from './CountPokemon';
 import TypeSelector from './TypeSelector';
 import Style from './style_module/CardsPokemon.module.css';
 import ButtonShowMore from './ButtonShowMore';
+import { Loading } from './LoadFound';
 
 const Pokedex = (props) => {
   const {
@@ -36,7 +37,7 @@ const Pokedex = (props) => {
         <div className={Style.pokedex_right_wrapper}>
           <CountPokemon />
           {loading ? (
-            <div>loading...</div>
+            <Loading />
           ) : (
             <ul className={Style.pokedex_cardsPokemon}>
               {pokemons &&

@@ -1,0 +1,22 @@
+.loading_wrapper {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading_gif {
+  margin-right: 6rem;
+}
+
+.notFound_wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+}
+
+.notFound_imagem {
+  margin: 10rem 0 3rem;
+}
