@@ -18,7 +18,6 @@ export default function Header() {
   const [notFound, setNotFound] = useState(false);
   const [pokemons, setPokemons] = useState([]);
   const [types, setTypes] = useState([]);
-  const [filterTypes, setFilterTypes] = useState([]);
   const [filterButton, setFilterButton] = useState([]);
   const [showMore, setShowMore] = useState([]);
 
@@ -40,8 +39,12 @@ export default function Header() {
   };
 
   useEffect(() => {
-    fetchPokemons();
     fetchTypesPokemon();
+  }, []);
+
+  useEffect(() => {
+    fetchPokemons();
+    // eslint-disable-next-line
   }, [showMore]);
 
   const onSearchHandler = async (pokemon) => {
@@ -80,7 +83,6 @@ export default function Header() {
       const promises = data.pokemon.map((pokemons) => {
         return pokemons.pokemon.name;
       });
-      setFilterTypes(promises);
       const filteredPokemon = promises.map(async (pokemon) => {
         return await searchPokemon(pokemon);
       });
@@ -91,8 +93,10 @@ export default function Header() {
       console.log('filterPokemons', error);
     }
   };
+
   useEffect(() => {
     if (filterButton.length !== 0) filterTypesPokemon();
+    // eslint-disable-next-line
   }, [filterButton]);
   return (
     <>
