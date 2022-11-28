@@ -106,3 +106,22 @@
 .pokemonCard_icoType img:last-child {
   margin-left: 0.8rem;
 }
+
+@media (max-width: 850px) {
+  .pokedex_cardsPokemon {
+    padding: 0 0 6rem 5.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+  }
+
+  .pokedex_right_wrapper {
+    padding-bottom: 7rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .pokedex_cardsPokemon {
+    padding: 0 0 6rem 0rem;
+    grid-template-columns: 1fr;
+  }
+}
