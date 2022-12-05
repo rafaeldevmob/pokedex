@@ -41,7 +41,7 @@
 
 ## Demonstração
 
-<img src='./pokegif.gif' alt='gif' width="100%"/>
+<img src='./pokegif.gif' alt='gif' />
 
 ## Como rodar a aplicação :arrow_forward:
 
