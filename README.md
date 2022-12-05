@@ -1,5 +1,3 @@
-<img src='./src/img/logo.svg' alt='pokemon'/>
-
 <h1>Pokedex Api</h1>
 <img src='./page.jpg' alt='pokePage' width="100%"/>
 </br>
