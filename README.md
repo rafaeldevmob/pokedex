@@ -1,8 +1,9 @@
-<img src='./src/img/logo.svg' alt='pokemon'/>
-
 <h1>Pokedex Api</h1>
-<img src='./page.jpg' alt='pokePage' width="100%"/>
-</br>
+<div align="center">
+  <img src='./page.jpg' alt='pokePage' />
+</div>
+<br>
+
 <div align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
 </div>
@@ -41,7 +42,7 @@
 
 ## Demonstração
 
-<img src='./pokegif.gif' alt='gif' width="100%"/>
+<img src='./pokegif.gif' alt='gif' />
 
 ## Como rodar a aplicação :arrow_forward:
 
