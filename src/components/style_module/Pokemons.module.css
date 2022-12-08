@@ -4,7 +4,8 @@
   filter: grayscale(100%);
 }
 
-.pokedex_left_wrapper li:hover {
+.pokedex_left_wrapper li:hover,
+:global(li.active) {
   opacity: 1;
   filter: grayscale(0);
 }
