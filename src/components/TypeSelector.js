@@ -11,7 +11,7 @@ export default function TypeSelector(props) {
     <>
       <div className={Style.pokedex_left_wrapper}>
         <ul>
-          <li className="All">
+          <li className="all">
             <button
               className={Style.pokedex_typePokemon}
               onClick={FilterTypePokemon}

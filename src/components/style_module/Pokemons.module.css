@@ -22,10 +22,6 @@
   align-items: center;
 }
 
-.pokedex_typePokemon span {
-  font-weight: 600;
-}
-
 .pokedex_typePokemon_icon {
   margin-right: 2rem;
   opacity: 1;
@@ -37,7 +33,7 @@
   font-family: var(--font-paragraph);
   font-size: 1.5rem;
   line-height: 150%;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .pokemonCount_wrapper {
@@ -68,6 +64,183 @@
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 150%;
+}
+
+:global(.imagePokemon) {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 1.4rem;
+}
+
+:global(.imagePokemon::before) {
+  content: '';
+  display: block;
+  width: 16.5rem;
+  height: 16.5rem;
+  border-radius: 50%;
+  position: absolute;
+  filter: opacity(0.15);
+  z-index: 0;
+}
+
+:global(.imagePokemon img) {
+  max-width: 55%;
+  max-height: 20rem;
+  z-index: 1;
+}
+
+:global(.pokedex) {
+  display: flex;
+  padding-top: 2rem;
+}
+
+:global(.all button) {
+  color: #3e75c3;
+}
+
+:global(.normal button) {
+  color: var(--normal);
+}
+
+:global(.fighting button) {
+  color: var(--fighting);
+}
+
+:global(.flying button) {
+  color: var(--flying);
+}
+
+:global(.poison button) {
+  color: var(--poison);
+}
+
+:global(.rock button) {
+  color: var(--rock);
+}
+
+:global(.bug button) {
+  color: var(--bug);
+}
+
+:global(.ghost button) {
+  color: var(--ghost);
+}
+:global(.steel button) {
+  color: var(--steel);
+}
+
+:global(.fire button) {
+  color: var(--fire);
+}
+:global(.water button) {
+  color: var(--water);
+}
+
+:global(.fire button) {
+  color: var(--fire);
+}
+
+:global(.grass button) {
+  color: var(--grass);
+}
+
+:global(.electric button) {
+  color: var(--electric);
+}
+:global(.ground button) {
+  color: var(--ground);
+}
+
+:global(.psychic button) {
+  color: var(--psychic);
+}
+:global(.ice button) {
+  color: var(--ice);
+}
+
+:global(.dragon button) {
+  color: var(--dragon);
+}
+
+:global(.dark button) {
+  color: var(--dark);
+}
+
+:global(.fairy button) {
+  color: var(--fairy);
+}
+
+:global(.normal .imagePokemon::before) {
+  background: var(--normal);
+}
+
+:global(.fighting .imagePokemon::before) {
+  background: var(--fighting);
+}
+
+:global(.flyng .imagePokemon::before) {
+  background: var(--flyng);
+}
+
+:global(.poison .imagePokemon::before) {
+  background: var(--poison);
+}
+
+:global(.rock .imagePokemon::before) {
+  background: var(--rock);
+}
+
+:global(.bug .imagePokemon::before) {
+  background: var(--bug);
+}
+
+:global(.steel .imagePokemon::before) {
+  background: var(--steel);
+}
+
+:global(.fire .imagePokemon::before) {
+  background: var(--fire);
+}
+
+:global(.water .imagePokemon::before) {
+  background: var(--water);
+}
+
+:global(.grass .imagePokemon::before) {
+  background: var(--grass);
+}
+
+:global(.eletric .imagePokemon::before) {
+  background: var(--eletric);
+}
+
+:global(.ground .imagePokemon::before) {
+  background: var(--ground);
+}
+
+:global(.psychic .imagePokemon::before) {
+  background: var(--psychic);
+}
+
+:global(.ice .imagePokemon::before) {
+  background: var(--ice);
+}
+
+:global(.dragon .imagePokemon::before) {
+  background: var(--dragon);
+}
+
+:global(.dark .imagePokemon::before) {
+  background: var(--dark);
+}
+
+:global(.fairy .imagePokemon::before) {
+  background: var(--fairy);
 }
 
 @media (max-width: 450px) {
