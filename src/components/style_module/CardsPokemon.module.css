@@ -44,7 +44,8 @@
   }
 }
 
-.pokedex_button {
+.pokedex_button,
+#showMorePokemon {
   background-color: rgba(188, 0, 1, 0.1);
   color: #bc0001;
   width: 19.6rem;
@@ -107,6 +108,12 @@
   margin-left: 0.8rem;
 }
 
+@media (min-width: 850px) and (max-width: 950px) {
+  .pokedex_cardsPokemon {
+    padding: 0 0 10rem 3.5rem;
+  }
+}
+
 @media (max-width: 850px) {
   .pokedex_cardsPokemon {
     padding: 0 0 6rem 5.5rem;
@@ -116,6 +123,12 @@
 
   .pokedex_right_wrapper {
     padding-bottom: 7rem;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 650px) {
+  .pokedex_cardsPokemon {
+    grid-template-columns: 1fr;
   }
 }
 

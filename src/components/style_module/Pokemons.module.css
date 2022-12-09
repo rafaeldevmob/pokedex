@@ -1,13 +1,13 @@
 .pokedex_left_wrapper li {
-  opacity: 0.6;
+  opacity: 1;
   margin-bottom: 3rem;
-  filter: grayscale(100%);
+  filter: grayscale(0);
 }
 
 .pokedex_left_wrapper li:hover,
 :global(li.active) {
-  opacity: 1;
-  filter: grayscale(0);
+  opacity: 0.6;
+  filter: grayscale(100%);
 }
 
 .pokedex_left_wrapper {
@@ -24,7 +24,7 @@
 }
 
 .pokedex_typePokemon_icon {
-  margin-right: 2rem;
+  padding-right: 2rem;
   opacity: 1;
 }
 
@@ -97,7 +97,6 @@
 
 :global(.pokedex) {
   display: flex;
-  padding-top: 2rem;
 }
 
 :global(.all button) {
@@ -131,6 +130,7 @@
 :global(.ghost button) {
   color: var(--ghost);
 }
+
 :global(.steel button) {
   color: var(--steel);
 }
@@ -138,6 +138,7 @@
 :global(.fire button) {
   color: var(--fire);
 }
+
 :global(.water button) {
   color: var(--water);
 }
@@ -153,6 +154,7 @@
 :global(.electric button) {
   color: var(--electric);
 }
+
 :global(.ground button) {
   color: var(--ground);
 }
@@ -160,6 +162,7 @@
 :global(.psychic button) {
   color: var(--psychic);
 }
+
 :global(.ice button) {
   color: var(--ice);
 }
@@ -200,6 +203,10 @@
   background: var(--bug);
 }
 
+:global(.ghost .imagePokemon::before) {
+  background: var(--ghost);
+}
+
 :global(.steel .imagePokemon::before) {
   background: var(--steel);
 }
@@ -216,8 +223,8 @@
   background: var(--grass);
 }
 
-:global(.eletric .imagePokemon::before) {
-  background: var(--eletric);
+:global(.electric .imagePokemon::before) {
+  background: var(--electric);
 }
 
 :global(.ground .imagePokemon::before) {

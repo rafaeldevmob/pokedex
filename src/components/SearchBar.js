@@ -21,22 +21,24 @@ const SearchBar = (props) => {
 
   return (
     <>
-      <section className="contain">
-        <div className={Style.search_wrapper}>
-          <h2>Select your Pokémon</h2>
-          <div className={Style.search_input}>
-            <input
-              type="text"
-              placeholder="Search name or ID"
-              onChange={onChangeHandler}
-            />
-            <button
-              type="button"
-              className={Style.search_input_icon}
-              onClick={onButtonClickHandler}
-            >
-              <img src={SearchIcon} alt="search" />
-            </button>
+      <section className={Style.section_search}>
+        <div className="contain">
+          <div className={Style.search_wrapper}>
+            <h2>Select your Pokémon</h2>
+            <div className={Style.search_input}>
+              <input
+                type="text"
+                placeholder="Search name or ID"
+                onChange={onChangeHandler}
+              />
+              <button
+                type="button"
+                className={Style.search_input_icon}
+                onClick={onButtonClickHandler}
+              >
+                <img src={SearchIcon} alt="search" />
+              </button>
+            </div>
           </div>
         </div>
       </section>
