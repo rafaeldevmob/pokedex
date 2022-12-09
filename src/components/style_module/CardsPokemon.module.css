@@ -16,7 +16,7 @@
   border-radius: 12px;
   box-shadow: 0px 10px 51px -5px rgb(183 189 193 / 30%);
   box-sizing: border-box;
-  cursor: pointer;
+  cursor: inherit;
   transition: all 0.2s;
   animation: fadeIn 0.3s forwards;
 }
