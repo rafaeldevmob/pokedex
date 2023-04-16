@@ -36,10 +36,6 @@
 - [X] Filtro de Tipos.
 - [X] Responsividade.
 
-## Funcionalidades em aberto :warning:
-
-- [ ] Visualização de status do Pokemon através de modal.
-
 ## Demonstração
 
 <img src='./pokegif.gif' alt='gif' />
