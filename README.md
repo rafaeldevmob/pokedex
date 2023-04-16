@@ -9,7 +9,7 @@
 </div>
 <br>
 
-> Status do Projeto: Em finalização :warning:
+> Status do Projeto: Em finalizado:
 
 <br>
 
