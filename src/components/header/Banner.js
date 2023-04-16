@@ -1,7 +1,7 @@
 import React from 'react';
-import Style from './style_module/Header.module.css';
-import Stars from '../img/luzes.svg';
-import Pokeball from '../img/img-pokeball.png';
+import Style from '../style_module/Header.module.css';
+import Stars from '../../img/luzes.svg';
+import Pokeball from '../../img/img-pokeball.png';
 
 export default function Banner() {
   return (

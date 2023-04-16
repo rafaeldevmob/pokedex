@@ -1,15 +1,22 @@
-import React from 'react';
-import Style from './style_module/CardsPokemon.module.css';
+import React, { useEffect, useState } from 'react';
+import Style from '../style_module/CardsPokemon.module.css';
 
 const PokemonCard = (props) => {
-  const { pokemon } = props;
+  const { pokemon, setShowModal, showModal, setPokemonStats } = props;
+
   const styleBackground = pokemon.types[0].type.name;
+
   let imagePokemon = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`;
+
+  function handleClick(pokeProps) {
+    setShowModal(!showModal);
+    setPokemonStats(pokeProps);
+  }
 
   if (pokemon.id < 650) {
     return (
       <>
-        <li className={styleBackground}>
+        <li className={styleBackground} onClick={() => handleClick(pokemon)}>
           <div className="imagePokemon">
             <img src={imagePokemon} alt={pokemon.name} />
           </div>

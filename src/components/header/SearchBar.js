@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Style from './style_module/Header.module.css';
-import SearchIcon from '../img/lupa.svg';
+import Style from '../style_module/Header.module.css';
+import SearchIcon from '../../img/lupa.svg';
 
 const SearchBar = (props) => {
   const [search, setSearch] = useState('');

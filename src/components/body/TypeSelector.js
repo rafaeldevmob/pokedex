@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Style from './style_module/Pokemons.module.css';
-import All from '../img/poke-type/icon-all.svg';
+import Style from '../style_module/Pokemons.module.css';
+import All from '../../img/poke-type/icon-all.svg';
 import ListTypePokemon from './ListTypePokemon';
 
 export default function TypeSelector(props) {

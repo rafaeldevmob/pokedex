@@ -5,13 +5,13 @@ import {
   searchPokemon,
   getTypesPokemons,
   getFilterTypesPokemons,
-} from '../api';
-import Logo from '../img/logo.svg';
-import Banner from './Banner';
-import { NotFound } from './LoadFound';
-import Pokedex from './Pokedex';
-import SearchBar from './SearchBar';
-import Style from './style_module/Header.module.css';
+} from '../../api';
+import Logo from '../../img/logo.svg';
+import Banner from '../header/Banner';
+import { NotFound } from '../LoadFound';
+import Pokedex from '../body/Pokedex';
+import Style from '../style_module/Header.module.css';
+import SearchBar from '../header/SearchBar';
 
 export default function Header() {
   const [loading, setLoading] = useState(false);

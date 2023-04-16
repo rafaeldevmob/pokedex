@@ -97,6 +97,7 @@
 
 :global(.pokedex) {
   display: flex;
+  height: 100%;
 }
 
 :global(.all button) {

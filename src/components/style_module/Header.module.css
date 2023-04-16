@@ -73,8 +73,8 @@
 }
 
 .section_search {
+  height: 100%;
   background: var(--grey);
-  padding-bottom: 5rem;
 }
 
 .search_input {
@@ -156,7 +156,7 @@
   .search_wrapper {
     flex-direction: column;
     padding-top: 18.9rem;
-    padding-bottom: 0rem;
+    padding-bottom: 3rem;
   }
 
   .search_wrapper h2 {
@@ -167,6 +167,7 @@
 @media (min-width: 450px) and (max-width: 650px) {
   .search_wrapper {
     padding-top: 11.9rem;
+    padding-bottom: 3rem;
   }
 }
 

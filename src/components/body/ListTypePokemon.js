@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from './style_module/Pokemons.module.css';
+import Style from '../style_module/Pokemons.module.css';
 
 const ListTypePokemon = (props) => {
   const { FilterTypePokemon } = props;
