@@ -1,6 +1,5 @@
 import React from 'react';
 import Style from '../style_module/ModalPokemon.module.css';
-import Background from '../style_module/CardsPokemon.module.css';
 import { CloseIcon } from '../../img/icon/closeIcon';
 
 const ModalPokemon = (props) => {
@@ -8,11 +7,10 @@ const ModalPokemon = (props) => {
   const { id, name, types, abilities, sprites, stats } = pokemonStats;
   const styleBackground = types[0].type.name;
 
-  console.log(types);
-
   function onClose() {
     setShowModal(false);
   }
+
   return (
     <section className={Style.cardsPokemon_modal}>
       <div className={Style.cardsPokemon_modal_context}>
@@ -24,7 +22,16 @@ const ModalPokemon = (props) => {
           className={`${Style.cardsPokemon_modal_images} ${styleBackground}`}
         >
           <div className={`imagePokemon ${Style.modal_imagePokemon}`}>
-            <img src={sprites.other.home.front_default} alt={name} />
+            <img
+              src={`https://codeboost.com.br/projetos/pokeapi/img/${styleBackground}.svg`}
+              alt={styleBackground}
+              className={Style.cardsPokemon_modal_typeImage}
+            />
+            <img
+              src={sprites.other.home.front_default}
+              alt={name}
+              className={Style.cardsPokemon_modal_image_pokemon}
+            />
           </div>
         </div>
 
@@ -73,7 +80,18 @@ const ModalPokemon = (props) => {
                       className={Style.cardsPokemon_modal_stats_text}
                     >
                       <li>{status.stat.name}</li>
-                      <li>{status.base_stat}</li>
+                      <li
+                        className={`${Style.cardsPokemon_modal_stats_backbar} type_background`}
+                      >
+                        <div
+                          className={`${Style.cardsPokemon_modal_stats_bar} ${styleBackground}`}
+                          style={{
+                            width: `${
+                              status.base_stat > 100 ? 100 : status.base_stat
+                            }%`,
+                          }}
+                        ></div>
+                      </li>
                     </div>
                   );
                 })}

@@ -25,23 +25,32 @@
   border-radius: 2.8rem 0 0 2.8rem;
 }
 
+.cardsPokemon_modal_typeImage {
+  position: absolute;
+  filter: opacity(0.5);
+}
+
 .cardsPokemon_modal_images img {
   display: block;
   width: 100%;
   max-width: 30rem;
 }
 
+.cardsPokemon_modal_image_pokemon {
+  position: absolute;
+  right: -3rem;
+}
+
 .cardsPokemon_modal_texts {
-  padding: 2rem 4rem;
+  padding: 2rem 4rem 2rem 6rem;
 }
 
 .cardsPokemon_modal_context {
   display: flex;
   max-width: 60rem;
-  /* height: 100%; */
   position: relative;
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
   border-radius: 2.8rem;
   background: #fff;
 }
@@ -121,14 +130,11 @@
 
 .cardsPokemon_modal_stats {
   margin-top: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 .cardsPokemon_modal_stats_text {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
   margin-bottom: 1.5rem;
 }
 
@@ -138,7 +144,21 @@
   font-size: 1.4rem;
   line-height: 1.5rem;
   color: #7a7d80;
-  width: 11rem;
+  width: 100%;
   display: block;
-  margin-right: 2.2rem;
+}
+
+.cardsPokemon_modal_stats_backbar {
+  height: 0.5rem;
+  width: 100%;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background: #eff3f6;
+  border-radius: 0.8rem;
+}
+
+.cardsPokemon_modal_stats_bar {
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 0.8rem;
 }

@@ -76,7 +76,7 @@
   justify-content: center;
   margin: 0 auto;
   margin-bottom: 1.4rem;
-  cursor: initial;
+  cursor: pointer;
 }
 
 :global(.imagePokemon::before) {
@@ -192,8 +192,8 @@
 }
 
 :global(.flyng .imagePokemon::before),
-:global(.type_background .flyng) {
-  background: var(--flyng);
+:global(.type_background .flying) {
+  background: var(--flying);
 }
 
 :global(.poison .imagePokemon::before),
