@@ -76,7 +76,7 @@
   justify-content: center;
   margin: 0 auto;
   margin-bottom: 1.4rem;
-  cursor:initial;
+  cursor: initial;
 }
 
 :global(.imagePokemon::before) {
@@ -181,75 +181,93 @@
   color: var(--fairy);
 }
 
-:global(.normal .imagePokemon::before) {
+:global(.normal .imagePokemon::before),
+:global(.type_background .normal) {
   background: var(--normal);
 }
 
-:global(.fighting .imagePokemon::before) {
+:global(.fighting .imagePokemon::before),
+:global(.type_background .fighting) {
   background: var(--fighting);
 }
 
-:global(.flyng .imagePokemon::before) {
+:global(.flyng .imagePokemon::before),
+:global(.type_background .flyng) {
   background: var(--flyng);
 }
 
-:global(.poison .imagePokemon::before) {
+:global(.poison .imagePokemon::before),
+:global(.type_background .poison) {
   background: var(--poison);
 }
 
-:global(.rock .imagePokemon::before) {
+:global(.rock .imagePokemon::before),
+:global(.type_background .rock) {
   background: var(--rock);
 }
 
-:global(.bug .imagePokemon::before) {
+:global(.bug .imagePokemon::before),
+:global(.type_background .bug) {
   background: var(--bug);
 }
 
-:global(.ghost .imagePokemon::before) {
+:global(.ghost .imagePokemon::before),
+:global(.type_background .ghost) {
   background: var(--ghost);
 }
 
-:global(.steel .imagePokemon::before) {
+:global(.steel .imagePokemon::before),
+:global(.type_background .steel) {
   background: var(--steel);
 }
 
-:global(.fire .imagePokemon::before) {
+:global(.fire .imagePokemon::before),
+:global(.type_background .fire) {
   background: var(--fire);
 }
 
-:global(.water .imagePokemon::before) {
+:global(.water .imagePokemon::before),
+:global(.type_background .water) {
   background: var(--water);
 }
 
-:global(.grass .imagePokemon::before) {
+:global(.grass .imagePokemon::before),
+:global(.type_background .grass) {
   background: var(--grass);
 }
 
-:global(.electric .imagePokemon::before) {
+:global(.electric .imagePokemon::before),
+:global(.type_background .electric) {
   background: var(--electric);
 }
 
-:global(.ground .imagePokemon::before) {
+:global(.ground .imagePokemon::before),
+:global(.type_background .ground) {
   background: var(--ground);
 }
 
-:global(.psychic .imagePokemon::before) {
+:global(.psychic .imagePokemon::before),
+:global(.type_background .psychic) {
   background: var(--psychic);
 }
 
-:global(.ice .imagePokemon::before) {
+:global(.ice .imagePokemon::before),
+:global(.type_background .ice) {
   background: var(--ice);
 }
 
-:global(.dragon .imagePokemon::before) {
+:global(.dragon .imagePokemon::before),
+:global(.type_background .dragon) {
   background: var(--dragon);
 }
 
-:global(.dark .imagePokemon::before) {
+:global(.dark .imagePokemon::before),
+:global(.type_background .dark) {
   background: var(--dark);
 }
 
-:global(.fairy .imagePokemon::before) {
+:global(.fairy .imagePokemon::before),
+:global(.type_background .fairy) {
   background: var(--fairy);
 }
 

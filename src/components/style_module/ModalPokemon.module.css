@@ -11,12 +11,24 @@
 
 .cardsPokemon_modal_images {
   display: flex;
+  align-items: center;
 }
+
+.modal_imagePokemon {
+  height: 100%;
+  margin-bottom: 0;
+}
+
+.modal_imagePokemon::before {
+  height: 100%;
+  width: 100%;
+  border-radius: 2.8rem 0 0 2.8rem;
+}
+
 .cardsPokemon_modal_images img {
   display: block;
   width: 100%;
   max-width: 30rem;
-  align-self: center;
 }
 
 .cardsPokemon_modal_texts {
@@ -50,6 +62,7 @@
 }
 
 .cardsPokemon_modal_title h2 {
+  text-transform: capitalize;
   font-size: 2.8rem;
   margin-right: 2rem;
 }
@@ -71,14 +84,26 @@
 
 .cardsPokemon_modal_types li {
   font-family: 'Inter', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+  color: #ffff;
   margin-right: 2rem;
+}
+
+.modal_types_text::before {
+  width: 0;
+  height: 0;
+  padding: 2rem 4rem;
+  border-radius: 0.5rem;
 }
 
 .cardsPokemon_modal_subtitle {
   margin-top: 4rem;
   font-family: 'Inter', sans-serif;
+  text-transform: capitalize;
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.6rem;
@@ -88,6 +113,7 @@
 
 .cardsPokemon_modal_ability li {
   font-family: 'Inter', sans-serif;
+  text-transform: capitalize;
   font-size: 1.4rem;
   font-weight: 500;
   margin-right: 2rem;
@@ -108,6 +134,7 @@
 
 .cardsPokemon_modal_stats_text li {
   font-family: 'Inter', sans-serif;
+  text-transform: capitalize;
   font-size: 1.4rem;
   line-height: 1.5rem;
   color: #7a7d80;

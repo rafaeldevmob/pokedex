@@ -1,11 +1,14 @@
 import React from 'react';
 import Style from '../style_module/ModalPokemon.module.css';
+import Background from '../style_module/CardsPokemon.module.css';
 import { CloseIcon } from '../../img/icon/closeIcon';
 
 const ModalPokemon = (props) => {
   const { setShowModal, pokemonStats } = props;
   const { id, name, types, abilities, sprites, stats } = pokemonStats;
-  console.log();
+  const styleBackground = types[0].type.name;
+
+  console.log(types);
 
   function onClose() {
     setShowModal(false);
@@ -17,8 +20,12 @@ const ModalPokemon = (props) => {
           <CloseIcon />
         </div>
 
-        <div className={Style.cardsPokemon_modal_images}>
-          <img src={sprites.other.home.front_default} />
+        <div
+          className={`${Style.cardsPokemon_modal_images} ${styleBackground}`}
+        >
+          <div className={`imagePokemon ${Style.modal_imagePokemon}`}>
+            <img src={sprites.other.home.front_default} alt={name} />
+          </div>
         </div>
 
         <div className={Style.cardsPokemon_modal_texts}>
@@ -35,9 +42,16 @@ const ModalPokemon = (props) => {
                 : null}
             </span>
           </div>
-          <ul className={Style.cardsPokemon_modal_types}>
+          <ul className={`${Style.cardsPokemon_modal_types} type_background`}>
             {types.map(({ type }, index) => {
-              return <li key={index}>{type.name}</li>;
+              return (
+                <li
+                  key={index}
+                  className={` ${Style.modal_types_text} ${type.name}`}
+                >
+                  {type.name}
+                </li>
+              );
             })}
           </ul>
           <ul>
